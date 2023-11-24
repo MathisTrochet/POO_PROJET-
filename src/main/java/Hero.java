@@ -3,15 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author flore
- */
 public class Hero extends Character{
     private int atk;
     private List<Object>inventory = new ArrayList<>();
@@ -38,18 +29,12 @@ public class Hero extends Character{
         target.currentHealth -= this.atk;
         System.out.println(target.name +" LP = " + target.currentHealth);
     }
+
     
     /*public int indexOfTown (){
         return this.pos.town.world.getTownList().indexOf(this.pos.town); //return the index of the town in the world's list
     }
-    public void go (Town t){
-        // Si pos du perso est 0, alors town du perso = town avant
-        if (this.indexOfPos() == 0 && t == this.pos.town.world.getTownList().get(this.indexOfTown()+1));
-           this.pos =  this.pos.town.world.getTownList().get(this.indexOfTown()+1).getPositions().get(0); //Start of the prev town
-        // Si pos du perso est taille list -1, alors town du perso = town après
-        if (this.indexOfPos() == this.posSize() - 1 && t == this.pos.town.world.getTownList().get(this.indexOfTown()-1))
-            this.pos = this.pos.town.world.getTownList().get(this.indexOfTown()-1).getPositions().get(0); // Start of the next town
-    }
+    
     public List<Position> getPositions (){
         return this.pos.getTown().getPositions(); //Return the list of positions based on the hero's actual town
     }
