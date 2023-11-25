@@ -17,6 +17,10 @@ public class Position {
         this.name = n;
         this.town = t;
     }
+    public String toString(){ //mathis | pour print la position dans les description je pense on en aura besoin 
+        return this.name;
+    }
+
     public String getDescription(){
         return this.description;
     }

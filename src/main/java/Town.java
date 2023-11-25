@@ -9,7 +9,6 @@ public class Town {
 
     public Town (String n){ // Ajouter la liste de Pos
         this.name = n;
-        
     }
     public World getWorld(){
         return this.world;
@@ -17,7 +16,11 @@ public class Town {
     public Map<String,Position> getPositions(){
         return this.positions;
 }
-    public void addPosition(String n, Town t){
-        positions.put(n, new Position(n,t));
+    //public void addPosition(String n, Town t){ 
+    //    positions.put(n, new Position(n,t));
+    //}
+
+    public void addPosition(String n){ //mathis | je pense pas qu'on ait besoin de town t
+        positions.put(n, new Position(n, this));
     }
 }

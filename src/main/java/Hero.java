@@ -62,14 +62,21 @@ public class Hero extends Character{
         Set <String>myKeySet = this.pos.getExits().keySet();
         System.out.println("Exits : " + myKeySet);
     }
-    
+    /*
     public void walk (String pos){
         if (this.pos.getExits().containsKey(pos)) //On regarde si l'une des exits est la pos demandé
-            this.pos = this.pos.getTown().getPositions().get(pos);//Si c'est le cas, on change de pos
+            this.pos = this.pos.getTown().getPositions().get(pos);//Si c'est le cas, on change de pos 
         else System.out.println ("It seems like this destination is too far away.");
     }
     
     public void go (String town){ //Ajouter les conditions, peut êtres créer une autre classe Exittown
-        this.pos.getTown().getWorld().getTowns().get(town);
+        this.pos = this.pos.getTown().getWorld().getTowns().get(town).getPositions().get("Spawn");      
+    }
+    */
+
+    public void go (String pos){ //Ajouter les conditions, peut êtres créer une autre classe Exittown  // mathis | je pense qu'on devrait avoir que cette fonction la
+        //if (this.pos.getExits().containsKey(pos)) //On regarde si l'une des exits est la pos demandé   // dcp on devra avoir les position du spawn en parametre qui contiendra "Town" en attribut
+            this.pos = this.pos.getTown().getPositions().get(pos);//Si c'est le cas, on change de pos  // donc normalement ca marcherait partout
+        //else System.out.println ("It seems like this destination is too far away.");
     }
 }
